@@ -145,7 +145,7 @@ done
 for f in $(find security -iname '*.h'); do
 	copy_mkdir "$target_dir" "$f"
 done
-copy_dir "$karch_dir/kernel/module.lds" "$target_karch_dir/kernel/"
+cp "$karch_dir/kernel/module.lds" "$target_karch_dir/kernel/"
 
 # Copy over tools include as some builds require this.
 mkdir -p "$target_dir/tools"
